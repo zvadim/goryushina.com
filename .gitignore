@@ -9,6 +9,7 @@ celerybeat.pid
 celerybeat-schedule
 /*.log
 /logs
+*.sqlite3
 
 # IDE
 /.project

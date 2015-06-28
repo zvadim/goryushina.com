@@ -60,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'goryushina.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
