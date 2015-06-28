@@ -1,0 +1,24 @@
+# shit
+*.swp
+*.swn
+*.swo
+*.pyc
+*.jar
+*.log
+celerybeat.pid
+celerybeat-schedule
+/*.log
+/logs
+
+# IDE
+/.project
+/.pydevproject
+/.settings
+/.idea
+
+# project
+/core/settings/local.py
+/TODO.txt
+
+# coverage data
+.coverage
