@@ -1,9 +1,10 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Page(models.Model):
     title = models.CharField(max_length=128)
-    text = models.TextField(blank=True)
+    text = HTMLField(blank=True)
     slug = models.SlugField()
 
     category = models.ForeignKey('category.Category', blank=True, null=True)
