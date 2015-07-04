@@ -1,7 +1,7 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -19,7 +19,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = (
-    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -27,9 +26,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'tinymce',
     'sorl.thumbnail',
 
+    'apps.redactor',
     'apps.category',
     'apps.page',
     'apps.gallery',
@@ -105,8 +104,20 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
 
 # Apps
+REDACTOR_OPTIONS = {
+    'lang': 'en',
+    'plugins': [
+        'fullscreen',
+        # 'imagemanager',
+        'video'
+    ],
+}
+REDACTOR_UPLOAD = '/uploads/'
+REDACTOR_UPLOAD_HANDLER = 'apps.redactor.handlers.DateDirectoryUploader'
 
 
 try:

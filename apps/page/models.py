@@ -1,10 +1,14 @@
 from django.db import models
-from tinymce.models import HTMLField
+from apps.redactor.fields import RedactorField
 
 
 class Page(models.Model):
     title = models.CharField(max_length=128)
-    text = HTMLField(blank=True)
+    text = RedactorField(
+        verbose_name=u'Text',
+        allow_file_upload=False,
+        allow_image_upload=True
+    )
     slug = models.SlugField()
 
     category = models.ForeignKey('category.Category', blank=True, null=True)
