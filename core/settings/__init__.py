@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'changelist_ordering',
 
+    'apps.ui',
     'apps.redactor',
     'apps.category',
     'apps.page',
