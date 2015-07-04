@@ -27,11 +27,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'sorl.thumbnail',
+    'changelist_ordering',
 
     'apps.redactor',
     'apps.category',
     'apps.page',
     'apps.gallery',
+    'apps.menu',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
