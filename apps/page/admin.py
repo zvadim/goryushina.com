@@ -1,10 +1,14 @@
-from django.contrib import admin
 from polymorphic.admin import PolymorphicChildModelAdmin
+from sorl.thumbnail.admin import AdminImageMixin
+from django.contrib import admin
+
 from apps.gallery.models import Image
 from .models import Page
 
-class GalleryInline(admin.StackedInline):
+
+class GalleryInline(AdminImageMixin, admin.StackedInline):
     model = Image
+
 
 @admin.register(Page)
 class PageAdmin(PolymorphicChildModelAdmin):
