@@ -7,3 +7,4 @@ from .models import Menu
 class MenuAdmin(ChangeListOrdering):
     ordering = ('order',)
 
+

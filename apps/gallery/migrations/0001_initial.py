@@ -8,7 +8,7 @@ import apps.gallery.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('page', '0003_auto_20150704_1725'),
+        ('page', '0001_initial'),
     ]
 
     operations = [

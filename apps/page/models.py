@@ -1,8 +1,9 @@
 from django.db import models
 from apps.redactor.fields import RedactorField
+from apps.menu.models import MenuItem
 
 
-class Page(models.Model):
+class Page(MenuItem):
     title = models.CharField(max_length=128)
     text = RedactorField(
         verbose_name=u'Text',
@@ -20,4 +21,4 @@ class Page(models.Model):
         ordering = ('title',)
 
     def __unicode__(self):
-        return self.title
+        return 'Page: %s' % self.title
