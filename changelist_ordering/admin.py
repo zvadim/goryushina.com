@@ -4,6 +4,7 @@ from django.http import HttpResponseBadRequest, HttpResponse
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _, ugettext
 
+
 class ChangeListOrdering(admin.ModelAdmin):
 
     def __init__(self, *args, **kwargs):
@@ -22,7 +23,7 @@ class ChangeListOrdering(admin.ModelAdmin):
         """
 
         if 'actions_column' not in self.list_display:
-            self.list_display.append('actions_column')
+            self.list_display.insert(0, 'actions_column')
 
         # handle common AJAX requests
         if request.is_ajax():

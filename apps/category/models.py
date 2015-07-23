@@ -10,5 +10,14 @@ class Category(MenuItem):
     class Meta:
         ordering = ('title',)
 
+    @staticmethod
+    def object_type():
+        return 'Category'
+
+    def get_url(self):
+        # FIXME:
+        return self.slug
+
     def __unicode__(self):
-        return 'Category: %s' % self.title
+        return '%s: %s' % (self.object_type(), self.title)
+

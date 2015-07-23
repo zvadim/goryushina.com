@@ -14,7 +14,14 @@ class Menu(models.Model):
     def __str__(self):
         return self.title
 
+    def get_url(self):
+        return self.linked_object.get_real_instance().get_url()
+
 
 class MenuItem(PolymorphicModel):
-    pass
+
+    def __str__(self):
+        instance = self.get_real_instance()
+        return '%s: %s' % (instance.object_type(), instance.title)
+
 

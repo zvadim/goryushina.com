@@ -5,6 +5,8 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^redactor/', include('apps.redactor.urls')),
+
+    url(r'^', include('apps.ui.urls')),
 ]
 
 # For development only
