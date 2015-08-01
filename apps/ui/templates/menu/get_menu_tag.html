@@ -1,6 +1,6 @@
 <ol class="list-unstyled main-menu">
     {% for m in menu %}
         <li></li>
-        <li {% if m.menu_active %} class="active" {% endif %}><a href="/{{ m.get_url }}/">{{ m.title }}</a></li>
+        <li {% if m.menu_active %} class="active" {% endif %}><a href="{{ m.get_url }}">{{ m.title }}</a></li>
     {% endfor %}
 </ol>

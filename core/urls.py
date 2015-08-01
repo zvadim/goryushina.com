@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^redactor/', include('apps.redactor.urls')),
 
-    url(r'^', include('apps.ui.urls')),
+    url(r'^', include('apps.ui.urls', namespace='ui')),
 ]
 
 # For development only

@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 from apps.redactor.fields import RedactorField
 from apps.menu.models import MenuItem
@@ -25,8 +26,7 @@ class Page(MenuItem):
         return 'Page'
 
     def get_url(self):
-        # FIXME:
-        return self.slug
+        return reverse('ui:page', kwargs={'slug': self.slug})
 
-    def __unicode__(self):
+    def __str__(self):
         return '%s: %s' % (self.object_type(), self.title)

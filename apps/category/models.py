@@ -1,3 +1,4 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 from apps.menu.models import MenuItem
 
@@ -15,8 +16,7 @@ class Category(MenuItem):
         return 'Category'
 
     def get_url(self):
-        # FIXME:
-        return self.slug
+        return reverse('ui:category', kwargs={'slug': self.slug})
 
     def __unicode__(self):
         return '%s: %s' % (self.object_type(), self.title)
