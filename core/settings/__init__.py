@@ -29,6 +29,7 @@ INSTALLED_APPS = (
 
     'sorl.thumbnail',
     'changelist_ordering',
+    'stored_settings',
 
     'apps.ui',
     'apps.redactor',
@@ -36,17 +37,6 @@ INSTALLED_APPS = (
     'apps.page',
     'apps.gallery',
     'apps.menu',
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.template.context_processors.debug',
-    'django.template.context_processors.i18n',
-    'django.template.context_processors.media',
-    'django.template.context_processors.static',
-    'django.template.context_processors.tz',
-    'django.template.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'stored_settings.context_processors.stored_settings',
             ],
         },
     },
