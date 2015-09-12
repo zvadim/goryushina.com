@@ -3,3 +3,4 @@ Pillow==2.8.2
 sorl-thumbnail==12.2
 django-polymorphic==0.7.1
 django-stored-settings==0.2.1
+django-tinymce==2.0.5

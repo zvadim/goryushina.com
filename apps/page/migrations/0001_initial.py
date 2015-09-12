@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import apps.redactor.fields
 
 
 class Migration(migrations.Migration):
@@ -18,7 +17,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('menuitem_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='menu.MenuItem')),
                 ('title', models.CharField(max_length=128)),
-                ('text', apps.redactor.fields.RedactorField(verbose_name='Text')),
+                ('text', models.CharField(verbose_name='Text')),
                 ('slug', models.SlugField()),
                 ('create_date', models.DateTimeField(auto_now_add=True)),
                 ('is_active', models.BooleanField(default=True)),

@@ -30,9 +30,9 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'changelist_ordering',
     'stored_settings',
+    'tinymce',
 
     'apps.ui',
-    'apps.redactor',
     'apps.category',
     'apps.page',
     'apps.gallery',
@@ -102,18 +102,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
 
-# Apps
-REDACTOR_OPTIONS = {
-    'lang': 'en',
-    'plugins': [
-        'fullscreen',
-        # 'imagemanager',
-        'video'
-    ],
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "autoresize,table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'width': 700,
+    'height': 800,
+    'theme_advanced_buttons1': "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
+    'theme_advanced_buttons2': "",
+    'theme_advanced_buttons3': "",
+    'theme_advanced_buttons4': "",
+    'theme_advanced_toolbar_location': "top",
+    'theme_advanced_toolbar_align': "left",
+    'theme_advanced_statusbar_location': "bottom",
+    'theme_advanced_resizing': True,
+    'theme_advanced_resizing_min_width': 700,
+    'theme_advanced_resizing_max_width': 700,
+    'theme_advanced_resizing_min_height': 700,
+    'theme_advanced_resizing_max_height': 1200,
 }
-REDACTOR_UPLOAD = '/uploads/'
-REDACTOR_UPLOAD_HANDLER = 'apps.redactor.handlers.DateDirectoryUploader'
-
 
 try:
     from .local import *
