@@ -169,6 +169,18 @@ h6, .h6 {
 * Menu
 */
 
+.main-menu li {
+  font-size: 16px;
+}
+
 .main-menu li.active a {
   color: #000;
 }
+
+/*
+* Carousel
+*/
+/*#carousel-page-gallery .carousel-caption {*/
+  /*position: static;*/
+  /*background-color: #999;*/
+/*}*/

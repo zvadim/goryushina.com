@@ -18,6 +18,10 @@ class Category(MenuItem):
     def get_url(self):
         return reverse('ui:category', kwargs={'slug': self.slug})
 
-    def __unicode__(self):
+    @property
+    def active_pages(self):
+        return self.page_set.filter(is_active=True)
+
+    def __str__(self):
         return '%s: %s' % (self.object_type(), self.title)
 
