@@ -32,6 +32,9 @@ class Page(MenuItem):
     def __str__(self):
         return '%s: %s' % (self.object_type(), self.title)
 
+    def get_absolute_url(self):
+        return self.get_url()
+
 
 class Category(MenuItem):
     title = models.CharField(max_length=128)
@@ -55,3 +58,6 @@ class Category(MenuItem):
 
     def __str__(self):
         return '%s: %s' % (self.object_type(), self.title)
+
+    def get_absolute_url(self):
+        return self.get_url()
