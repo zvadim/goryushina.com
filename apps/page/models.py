@@ -14,7 +14,7 @@ class Page(MenuItem):
 
     slug = models.SlugField()
 
-    category = models.ForeignKey('category.Category', blank=True, null=True)
+    category = models.ForeignKey('page.Category', blank=True, null=True)
 
     create_date = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
@@ -28,6 +28,30 @@ class Page(MenuItem):
 
     def get_url(self):
         return reverse('ui:page', kwargs={'slug': self.slug})
+
+    def __str__(self):
+        return '%s: %s' % (self.object_type(), self.title)
+
+
+class Category(MenuItem):
+    title = models.CharField(max_length=128)
+    slug = models.SlugField()
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('title',)
+        verbose_name_plural = 'Categories'
+
+    @staticmethod
+    def object_type():
+        return 'Category'
+
+    def get_url(self):
+        return reverse('ui:category', kwargs={'slug': self.slug})
+
+    @property
+    def active_pages(self):
+        return self.page_set.filter(is_active=True)
 
     def __str__(self):
         return '%s: %s' % (self.object_type(), self.title)

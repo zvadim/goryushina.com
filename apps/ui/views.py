@@ -1,8 +1,7 @@
 import importlib
 from django.core.urlresolvers import resolve
 from django.views.generic import View, DetailView
-from apps.page.models import Page
-from apps.category.models import Category
+from apps.page.models import Page, Category
 from apps.menu.models import Menu
 
 

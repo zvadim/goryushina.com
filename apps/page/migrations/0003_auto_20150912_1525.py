@@ -8,6 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('menu', '0001_initial'),
+        ('page', '0002_auto_20150912_1201'),
     ]
 
     operations = [
@@ -23,5 +24,10 @@ class Migration(migrations.Migration):
                 'ordering': ('title',),
             },
             bases=('menu.menuitem',),
+        ),
+        migrations.AlterField(
+            model_name='page',
+            name='category',
+            field=models.ForeignKey(blank=True, to='page.Category', null=True),
         ),
     ]

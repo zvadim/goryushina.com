@@ -34,7 +34,6 @@ INSTALLED_APPS = (
     'stored_settings',
 
     'apps.ui',
-    'apps.category',
     'apps.page',
     'apps.gallery',
     'apps.menu',

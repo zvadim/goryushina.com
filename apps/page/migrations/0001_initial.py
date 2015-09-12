@@ -8,7 +8,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('menu', '0001_initial'),
-        ('category', '0001_initial'),
     ]
 
     operations = [
@@ -21,7 +20,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField()),
                 ('create_date', models.DateTimeField(auto_now_add=True)),
                 ('is_active', models.BooleanField(default=True)),
-                ('category', models.ForeignKey(blank=True, to='category.Category', null=True)),
+                ('category', models.ForeignKey(blank=True, to='page.Page', null=True)),
             ],
             options={
                 'ordering': ('title',),

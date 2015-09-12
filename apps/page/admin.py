@@ -4,6 +4,7 @@ from mce_filebrowser.admin import MCEFilebrowserAdmin
 from django.contrib import admin
 
 from apps.gallery.models import Image
+from apps.page.models import Category
 from .models import Page
 
 
@@ -18,3 +19,9 @@ class PageAdmin(PolymorphicChildModelAdmin, MCEFilebrowserAdmin):
     list_display = ('title', 'category', 'is_active', 'create_date')
     list_filter = ('category', 'is_active')
     inlines = (GalleryInline,)
+
+
+@admin.register(Category)
+class CategoryAdmin(PolymorphicChildModelAdmin):
+    base_model = Category
+    prepopulated_fields = {'slug': ('title',)}
