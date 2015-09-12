@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
 
 {% block content %}
     <div class="blog-post">
+        <h2>{{ object.title }}</h2>
         {% for page in object.active_pages %}
-            <div class="category_page">
-                <h3>{{ page.title }}</h3>
-                <p>
-                    {{ page.text|striptags|truncatewords:20 }}
-                    <a href="{{ page.get_url }}">show more</a>
-                </p>
+            <div class="category_page{% if not forloop.counter|divisibleby:2 %} odd{% endif %}">
+                <a href="{{ page.get_url }}">
+                    {% thumbnail page.preview "330x140" crop="center" as im %}
+                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ image.title }}">
+                    {% endthumbnail %}
+                    <p>{{ page.title }}</p>
+                </a>
             </div>
         {% endfor %}
     </div>
