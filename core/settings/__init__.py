@@ -105,10 +105,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
 
 TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
-    'plugins': "advimage,youtubeIframe,table,spellchecker,paste,searchreplace,inlinepopups",
+    'plugins': "embed,advimage,youtubeIframe,table,spellchecker,paste,searchreplace,inlinepopups",
     'width': 700,
     'height': 800,
-    'theme_advanced_buttons1': "youtubeIframe,image,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
+    'theme_advanced_buttons1': "embed,youtubeIframe,image,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
     'theme_advanced_buttons2': "",
     'theme_advanced_buttons3': "",
     'theme_advanced_buttons4': "",
