@@ -13,7 +13,7 @@ class GalleryInline(AdminImageMixin, admin.StackedInline):
 
 
 @admin.register(Page)
-class PageAdmin(PolymorphicChildModelAdmin, MCEFilebrowserAdmin):
+class PageAdmin(AdminImageMixin, PolymorphicChildModelAdmin, MCEFilebrowserAdmin):
     base_model = Page
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'category', 'is_active', 'create_date')

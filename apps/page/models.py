@@ -1,6 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 from tinymce.models import HTMLField
+from sorl.thumbnail import ImageField
 
 from apps.menu.models import MenuItem
 
@@ -9,12 +10,13 @@ class Page(MenuItem):
     title = models.CharField(max_length=128)
     text = HTMLField(
         verbose_name=u'Text',
-        help_text='Best video/photo size is 695x390'
+        help_text='The best video/photo size is 695x390'
     )
 
     slug = models.SlugField()
 
     category = models.ForeignKey('page.Category', blank=True, null=True)
+    preview = ImageField(upload_to='page_preview')
 
     create_date = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
