@@ -5,6 +5,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^mce_filebrowser/', include('mce_filebrowser.urls')),
 
     url(r'^', include('apps.ui.urls', namespace='ui')),
 ]

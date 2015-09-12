@@ -27,10 +27,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'tinymce',
     'sorl.thumbnail',
+    'mce_filebrowser',
     'changelist_ordering',
     'stored_settings',
-    'tinymce',
 
     'apps.ui',
     'apps.category',
@@ -103,11 +104,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_files')
 
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "autoresize,table,spellchecker,paste,searchreplace",
     'theme': "advanced",
+    'plugins': "advimage,table,spellchecker,paste,searchreplace,inlinepopups",
     'width': 700,
     'height': 800,
-    'theme_advanced_buttons1': "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
+    'theme_advanced_buttons1': "image,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
     'theme_advanced_buttons2': "",
     'theme_advanced_buttons3': "",
     'theme_advanced_buttons4': "",
@@ -119,6 +120,12 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme_advanced_resizing_max_width': 700,
     'theme_advanced_resizing_min_height': 700,
     'theme_advanced_resizing_max_height': 1200,
+
+    'file_browser_callback': 'mce_filebrowser',
+    # 'skin': "o2k7",
+    # 'skin_variant': "silver",
+
+
 }
 
 try:

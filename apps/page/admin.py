@@ -1,5 +1,6 @@
 from polymorphic.admin import PolymorphicChildModelAdmin
 from sorl.thumbnail.admin import AdminImageMixin
+from mce_filebrowser.admin import MCEFilebrowserAdmin
 from django.contrib import admin
 
 from apps.gallery.models import Image
@@ -11,7 +12,7 @@ class GalleryInline(AdminImageMixin, admin.StackedInline):
 
 
 @admin.register(Page)
-class PageAdmin(PolymorphicChildModelAdmin):
+class PageAdmin(PolymorphicChildModelAdmin, MCEFilebrowserAdmin):
     base_model = Page
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'category', 'is_active', 'create_date')
