@@ -85,9 +85,16 @@ h6, .h6 {
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: normal;
 }
+.blog-title a {
+  color: #000;
+}
+.blog-title a:hover {
+  text-decoration: none;
+}
+
 .blog-description {
   font-size: 20px;
   color: #999;
@@ -152,11 +159,12 @@ h6, .h6 {
 }
 .blog-post-title {
   margin-bottom: 5px;
-  font-size: 40px;
+  font-size: 34px;
 }
 .blog-post-meta {
   margin-bottom: 20px;
   color: #999;
+  font-size: 15px;
 }
 
 
