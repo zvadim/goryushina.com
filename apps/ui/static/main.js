@@ -8,4 +8,6 @@ $(document).ready(function(){
         swipe: false,
         variableWidth: true
     });
+
+    $(".fancybox").fancybox();
 });
