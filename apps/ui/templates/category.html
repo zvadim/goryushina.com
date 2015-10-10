@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="blog-post">
-        <h2>{{ object.title }}</h2>
+        <h2 class="blog-category-title">{{ object.title }}</h2>
         {% for page in object.active_pages %}
             <div class="category_page{% if not forloop.counter|divisibleby:2 %} odd{% endif %}">
                 <a href="{{ page.get_url }}">

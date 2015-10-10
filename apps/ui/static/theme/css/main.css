@@ -148,6 +148,10 @@ a {
  * Category
  */
 
+.blog-category-title {
+    font-size: 26px;
+}
+
 .category_page {
   float: left;
 }

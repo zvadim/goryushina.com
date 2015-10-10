@@ -35,7 +35,9 @@
 
     <div class="blog-header">
         <h1 class="blog-title"><a href='/'>{{ stored_settings.site_title }}</a></h1>
-        <p class="lead blog-description">{{ stored_settings.title_description }}</p>
+        {% if stored_settings.title_description %}
+            <p class="lead blog-description">{{ stored_settings.title_description }}</p>
+        {% endif %}
     </div>
 
     <div class="row">
