@@ -4,7 +4,7 @@
 
 body {
   font-family: 'SiriLight', Georgia, "Times New Roman", Times, serif;
-  color: #555;
+  color: #333;
 }
 
 h1, .h1,
@@ -30,7 +30,7 @@ a {
 
 @media (min-width: 1200px) {
   .container {
-    width: 970px;
+    width: 1000px;
   }
 }
 
@@ -89,7 +89,7 @@ a {
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: normal;
 }
 .blog-title a {
@@ -100,7 +100,7 @@ a {
 }
 
 .blog-description {
-  font-size: 20px;
+  font-size: 16px;
   color: #999;
 }
 
@@ -110,8 +110,9 @@ a {
  */
 
 .blog-main {
-  font-size: 18px;
-  line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.5;
+    padding-right: 50px;
 }
 
 /* Sidebar modules for boxing content */
@@ -163,7 +164,7 @@ a {
 }
 .blog-post-title {
   margin-bottom: 5px;
-  font-size: 34px;
+  font-size: 30px;
 }
 .blog-post-meta {
   font-family: 'SiriLightItalic', Georgia, "Times New Roman", Times, serif;
