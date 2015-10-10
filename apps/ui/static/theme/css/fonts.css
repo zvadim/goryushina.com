@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'SiriRegular';
+    src: url('../../fonts/SiriRegular.eot');
+    src: url('../../fonts/SiriRegular.eot') format('embedded-opentype'),
+         url('../../fonts/SiriRegular.woff2') format('woff2'),
+         url('../../fonts/SiriRegular.woff') format('woff'),
+         url('../../fonts/SiriRegular.ttf') format('truetype'),
+         url('../../fonts/SiriRegular.svg#SiriRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'SiriLight';
+    src: url('../../fonts/SiriLight.eot');
+    src: url('../../fonts/SiriLight.eot') format('embedded-opentype'),
+         url('../../fonts/SiriLight.woff2') format('woff2'),
+         url('../../fonts/SiriLight.woff') format('woff'),
+         url('../../fonts/SiriLight.ttf') format('truetype'),
+         url('../../fonts/SiriLight.svg#SiriLight') format('svg');
+}
+
+@font-face {
+    font-family: 'SiriLightItalic';
+    src: url('../../fonts/SiriLightItalic.eot');
+    src: url('../../fonts/SiriLightItalic.eot') format('embedded-opentype'),
+         url('../../fonts/SiriLightItalic.woff2') format('woff2'),
+         url('../../fonts/SiriLightItalic.woff') format('woff'),
+         url('../../fonts/SiriLightItalic.ttf') format('truetype'),
+         url('../../fonts/SiriLightItalic.svg#SiriLightItalic') format('svg');
+}
+
+@font-face {
+    font-family: 'SiriBold';
+    src: url('../../fonts/SiriBold.eot');
+    src: url('../../fonts/SiriBold.eot') format('embedded-opentype'),
+         url('../../fonts/SiriBold.woff2') format('woff2'),
+         url('../../fonts/SiriBold.woff') format('woff'),
+         url('../../fonts/SiriBold.ttf') format('truetype'),
+         url('../../fonts/SiriBold.svg#SiriBold') format('svg');
+}
+
+
