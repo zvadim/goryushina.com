@@ -7,9 +7,11 @@
         {% for page in object.active_pages %}
             <div class="category_page{% if not forloop.counter|divisibleby:2 %} odd{% endif %}">
                 <a href="{{ page.get_url }}">
-                    {% thumbnail page.preview "330x240" crop="center" as im %}
-                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ image.title }}">
-                    {% endthumbnail %}
+                    {% if page.preview %}
+                        {% thumbnail page.preview "330x240" crop="center" as im %}
+                            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ image.title }}">
+                        {% endthumbnail %}
+                    {% endif %}
                     <p>{{ page.title }}</p>
                 </a>
             </div>

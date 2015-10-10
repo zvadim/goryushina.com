@@ -13,10 +13,10 @@ class Page(MenuItem):
         help_text='The best video/photo size is 695x390'
     )
 
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
     category = models.ForeignKey('page.Category', blank=True, null=True)
-    preview = ImageField(upload_to='page_preview')
+    preview = ImageField(upload_to='page_preview', blank=True, null=True)
 
     create_date = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
