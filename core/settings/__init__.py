@@ -108,7 +108,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'plugins': "embed,advimage,youtubeIframe,table,spellchecker,paste,searchreplace,inlinepopups",
     'width': 700,
     'height': 800,
-    'theme_advanced_buttons1': "embed,youtubeIframe,image,|,pastetext,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
+    'theme_advanced_buttons1': "embed,youtubeIframe,image,|,pastetext,|,link,unlink,|,bold,italic,underline,strikethrough,address,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,|,table,removeformat,code",
     'theme_advanced_buttons2': "",
     'theme_advanced_buttons3': "",
     'theme_advanced_buttons4': "",
