@@ -9,5 +9,7 @@ $(document).ready(function(){
         variableWidth: true
     });
 
-    $(".fancybox").fancybox();
+    $(".fancybox").fancybox({
+        padding: 0
+    });
 });
