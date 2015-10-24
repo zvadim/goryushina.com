@@ -7,7 +7,7 @@ def get_path(instance, name):
 
 
 class Image(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, blank=True)
     file = ImageField(upload_to=get_path, width_field='width', height_field='height')
 
     width = models.IntegerField(editable=False)
@@ -17,3 +17,6 @@ class Image(models.Model):
     edit_dt = models.DateTimeField(auto_now=True)
 
     page = models.ForeignKey('page.Page', related_name='gallery')
+
+    def __unicode__(self):
+        return self.title or u'Image #%s' % self.pk
