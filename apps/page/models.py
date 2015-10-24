@@ -21,8 +21,10 @@ class Page(MenuItem):
     create_date = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
 
+    order = models.IntegerField(default=999, editable=False)
+
     class Meta:
-        ordering = ('title',)
+        ordering = ('order', 'title')
         
     @staticmethod
     def object_type():
