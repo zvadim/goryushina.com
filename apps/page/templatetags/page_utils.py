@@ -9,6 +9,9 @@ register = template.Library()
 
 @register.filter()
 def thumbnail_images(text, geometry_string='800'):
+    """
+    Creates thumbnails for each img in given text
+    """
     soup = BeautifulSoup(text, "html.parser")
 
     img_tag = soup.find_all('img')
