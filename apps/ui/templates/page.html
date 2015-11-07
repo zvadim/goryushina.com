@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load thumbnail %}
+{% load thumbnail page_utils %}
 
 {% block content %}
     <div class="blog-post">
@@ -8,7 +8,7 @@
             <p class="blog-post-meta">Category: <a href="{{ object.category.get_absolute_url }}">
                 {{ object.category.title }}</a></p>
         {% endif %}
-        {{ object.text|safe }}
+        {{ object.text|thumbnail_images|safe }}
 
         {% if object.gallery.count %}
         <div id="carousel-page-gallery" class="">

@@ -6,4 +6,4 @@ django-stored-settings==0.2.1
 django-tinymce==2.0.5
 django-tinymce-filebrowser==0.2.1
 gunicorn==19.3.0
-
+beautifulsoup4==4.4.1
