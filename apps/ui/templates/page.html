@@ -14,7 +14,7 @@
         <div id="carousel-page-gallery" class="">
             {% for image in object.gallery.all %}
             <div class="gallery-item">
-                {% thumbnail image.file "600" as big_im %}
+                {% thumbnail image.file "x700" as big_im %}
                     <a rel="gallery" class="fancybox" href="{{ big_im.url }}">
                     {% thumbnail image.file "x350" as im %}
                         <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ image.title }}">
