@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="blog-post">
-        <h2 class="blog-post-title">{{ object.title }}</h2>
+        <h1 class="blog-post-title">{{ object.title }}</h1>
         {% if object.category %}
             <p class="blog-post-meta">Category: <a href="{{ object.category.get_absolute_url }}">
                 {{ object.category.title }}</a></p>

@@ -37,9 +37,9 @@
 <div class="container">
 
     <div class="blog-header">
-        <h1 class="blog-title"><a href='/'>{{ stored_settings.site_title }}</a></h1>
+        <h1 class="blog-title"><a href='/'><img src="{{ stored_settings.site_logo.url }}" alt="{{ stored_settings.site_title }}"></a></h1>
         {% if stored_settings.title_description %}
-            <p class="lead blog-description">{{ stored_settings.title_description }}</p>
+            <div class="lead blog-description">{{ stored_settings.title_description|safe|linebreaks }}</div>
         {% endif %}
     </div>
 
@@ -51,7 +51,7 @@
 
         <div class="col-sm-3 blog-sidebar">
             <div class="sidebar-module sidebar-module-inset">
-                <h4>Contact</h4>
+                <h1>Contact</h1>
                 <p>{{ stored_settings.about_block|urlize|linebreaks }}</p>
                 <ol class="list-unstyled">
                     <li><a href="https://instagram.com/tyanachu/" target="_blank" rel="nofollow">Instagram</a></li>

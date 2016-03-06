@@ -1,41 +1,44 @@
 @font-face {
-    font-family: 'SiriRegular';
-    src: url('../../fonts/SiriRegular.eot');
-    src: url('../../fonts/SiriRegular.eot') format('embedded-opentype'),
-         url('../../fonts/SiriRegular.woff2') format('woff2'),
-         url('../../fonts/SiriRegular.woff') format('woff'),
-         url('../../fonts/SiriRegular.ttf') format('truetype'),
-         url('../../fonts/SiriRegular.svg#SiriRegular') format('svg');
+    font-family: 'URWImperialTOT-Regular';
+    src: url('../../fonts/URWImperialTOT-Reg.eot');
+    src: url('../../fonts/URWImperialTOT-Reg.eot') format('embedded-opentype'),
+         url('../../fonts/URWImperialTOT-Reg.woff') format('woff'),
+         url('../../fonts/URWImperialTOT-Reg.ttf') format('truetype'),
+         url('../../fonts/URWImperialTOT-Reg.svg') format('svg');
 }
 
 @font-face {
-    font-family: 'SiriLight';
-    src: url('../../fonts/SiriLight.eot');
-    src: url('../../fonts/SiriLight.eot') format('embedded-opentype'),
-         url('../../fonts/SiriLight.woff2') format('woff2'),
-         url('../../fonts/SiriLight.woff') format('woff'),
-         url('../../fonts/SiriLight.ttf') format('truetype'),
-         url('../../fonts/SiriLight.svg#SiriLight') format('svg');
+    font-family: 'URWImperialTOT-Italic';
+    src: url('../../fonts/URWImperialTOT-RegObl.eot');
+    src: url('../../fonts/URWImperialTOT-RegObl.eot') format('embedded-opentype'),
+         url('../../fonts/URWImperialTOT-RegObl.woff') format('woff'),
+         url('../../fonts/URWImperialTOT-RegObl.ttf') format('truetype'),
+         url('../../fonts/URWImperialTOT-RegObl.svg') format('svg');
 }
 
 @font-face {
-    font-family: 'SiriLightItalic';
-    src: url('../../fonts/SiriLightItalic.eot');
-    src: url('../../fonts/SiriLightItalic.eot') format('embedded-opentype'),
-         url('../../fonts/SiriLightItalic.woff2') format('woff2'),
-         url('../../fonts/SiriLightItalic.woff') format('woff'),
-         url('../../fonts/SiriLightItalic.ttf') format('truetype'),
-         url('../../fonts/SiriLightItalic.svg#SiriLightItalic') format('svg');
+    font-family: 'URWImperialTOT-Bold';
+    src: url('../../fonts/URWImperialTOT-Bol.eot');
+    src: url('../../fonts/URWImperialTOT-Bol.eot') format('embedded-opentype'),
+         url('../../fonts/URWImperialTOT-Bol.woff') format('woff'),
+         url('../../fonts/URWImperialTOT-Bol.ttf') format('truetype'),
+         url('../../fonts/URWImperialTOT-Bol.svg') format('svg');
 }
 
 @font-face {
-    font-family: 'SiriBold';
-    src: url('../../fonts/SiriBold.eot');
-    src: url('../../fonts/SiriBold.eot') format('embedded-opentype'),
-         url('../../fonts/SiriBold.woff2') format('woff2'),
-         url('../../fonts/SiriBold.woff') format('woff'),
-         url('../../fonts/SiriBold.ttf') format('truetype'),
-         url('../../fonts/SiriBold.svg#SiriBold') format('svg');
+    font-family: 'ARACNE-ULTRA-CONDENSED-Soft_Regular';
+    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.eot');
+    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.eot') format('embedded-opentype'),
+         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.woff') format('woff'),
+         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.svg') format('svg');
+         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.ttf') format('truetype'),
 }
 
-
+@font-face {
+    font-family: 'ARACNE-ULTRA-CONDENSED-Soft_Light';
+    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.eot');
+    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.eot') format('embedded-opentype'),
+         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.woff') format('woff'),
+         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.svg') format('svg');
+         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.ttf') format('truetype'),
+}
