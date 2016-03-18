@@ -1,44 +1,15 @@
 @font-face {
-    font-family: 'URWImperialTOT-Regular';
-    src: url('../../fonts/URWImperialTOT-Reg.eot');
-    src: url('../../fonts/URWImperialTOT-Reg.eot') format('embedded-opentype'),
-         url('../../fonts/URWImperialTOT-Reg.woff') format('woff'),
-         url('../../fonts/URWImperialTOT-Reg.ttf') format('truetype'),
-         url('../../fonts/URWImperialTOT-Reg.svg') format('svg');
+    font-family: 'gill-sans-mt';
+    src: url('../../fonts/gill-sans-mt.eot');
+    src: url('../../fonts/gill-sans-mt.eot') format('embedded-opentype'),
+         url('../../fonts/gill-sans-mt.woff') format('woff'),
+         url('../../fonts/gill-sans-mt.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'URWImperialTOT-Italic';
-    src: url('../../fonts/URWImperialTOT-RegObl.eot');
-    src: url('../../fonts/URWImperialTOT-RegObl.eot') format('embedded-opentype'),
-         url('../../fonts/URWImperialTOT-RegObl.woff') format('woff'),
-         url('../../fonts/URWImperialTOT-RegObl.ttf') format('truetype'),
-         url('../../fonts/URWImperialTOT-RegObl.svg') format('svg');
-}
-
-@font-face {
-    font-family: 'URWImperialTOT-Bold';
-    src: url('../../fonts/URWImperialTOT-Bol.eot');
-    src: url('../../fonts/URWImperialTOT-Bol.eot') format('embedded-opentype'),
-         url('../../fonts/URWImperialTOT-Bol.woff') format('woff'),
-         url('../../fonts/URWImperialTOT-Bol.ttf') format('truetype'),
-         url('../../fonts/URWImperialTOT-Bol.svg') format('svg');
-}
-
-@font-face {
-    font-family: 'ARACNE-ULTRA-CONDENSED-Soft_Regular';
-    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.eot');
-    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.eot') format('embedded-opentype'),
-         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.woff') format('woff'),
-         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.svg') format('svg');
-         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Regular.ttf') format('truetype'),
-}
-
-@font-face {
-    font-family: 'ARACNE-ULTRA-CONDENSED-Soft_Light';
-    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.eot');
-    src: url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.eot') format('embedded-opentype'),
-         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.woff') format('woff'),
-         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.svg') format('svg');
-         url('../../fonts/ARACNE-ULTRA-CONDENSED-Soft_Light.ttf') format('truetype'),
+    font-family: 'gill-sans-mt-bold';
+    src: url('../../fonts/gill-sans-mt-bold.eot');
+    src: url('../../fonts/gill-sans-mt-bold.eot') format('embedded-opentype'),
+         url('../../fonts/gill-sans-mt-bold.woff') format('woff'),
+         url('../../fonts/gill-sans-mt-bold.ttf') format('truetype');
 }
