@@ -95,7 +95,7 @@ a {
 .blog-title {
   display: inline-block;
   margin-top: 30px;
-  margin-bottom: 0;
+  margin-bottom: 25px;
   font-size: 44px;
   font-weight: normal;
 }
@@ -181,10 +181,10 @@ a {
   /*font-size: 26px;*/
 }
 .blog-post-meta, .blog-post-meta a {
-  font-family: 'gill-sans-mt-bold', Georgia, "Times New Roman", Times, serif;
+  font-family: 'gill-sans-mt', Georgia, "Times New Roman", Times, serif;
   margin-bottom: 20px;
   color: #999;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 
@@ -208,8 +208,8 @@ a {
 */
 
 .main-menu li a {
-  font-size: 20px;
-  font-family: 'gill-sans-mt-bold', Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-family: 'gill-sans-mt', Georgia, "Times New Roman", Times, serif;
 }
 
 .main-menu li.active a {
