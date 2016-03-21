@@ -36,8 +36,10 @@
 
 <div class="container">
 
-    <div class="blog-header">
-        <h1 class="blog-title"><a href='/'><img src="{{ stored_settings.site_logo.url }}" alt="{{ stored_settings.site_title }}"></a></h1>
+    <div class="blog-header row">
+        <div class="logo col-sm-9">
+            <h1 class="blog-title"><a href='/'><img src="{{ stored_settings.site_logo.url }}" alt="{{ stored_settings.site_title }}"></a></h1>
+        </div>
         {% if stored_settings.title_description %}
             <div class="lead blog-description">{{ stored_settings.title_description|safe|linebreaks }}</div>
         {% endif %}

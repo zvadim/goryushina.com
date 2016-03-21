@@ -90,8 +90,11 @@ a {
 .blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.blog-header .logo  {
   text-align: center;
 }
+
 .blog-title {
   display: inline-block;
   margin-top: 30px;
@@ -134,6 +137,7 @@ a {
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 4px;
+  margin-bottom: 36px;
 }
 .sidebar-module-inset p:last-child,
 .sidebar-module-inset ul:last-child,
