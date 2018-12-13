@@ -1,8 +1,7 @@
 import json
 from django.contrib import admin
 from django.http import HttpResponseBadRequest, HttpResponse
-from django.utils.safestring import mark_safe
-from django.utils.translation import ugettext_lazy as _, ugettext
+from django.utils.translation import ugettext_lazy as _
 
 
 class ChangeListOrdering(admin.ModelAdmin):
@@ -14,7 +13,7 @@ class ChangeListOrdering(admin.ModelAdmin):
 
         self.change_list_template = [
             'changelist_ordering.html',
-            ]
+        ]
 
     def changelist_view(self, request, extra_context=None, *args, **kwargs):
         """
@@ -38,11 +37,12 @@ class ChangeListOrdering(admin.ModelAdmin):
         return super(ChangeListOrdering, self).changelist_view(request, extra_context, *args, **kwargs)
 
     def _actions_column(self, instance):
-        return ['<span id="page_marker-%d" class="page_marker">&nbsp;</span>&nbsp;<div class="drag_handle"></div>'
-                % instance.id]
+        return [
+            '<span id="page_marker-%d" class="page_marker">&nbsp;</span>&nbsp;<div class="drag_handle"></div>' % instance.id
+        ]
 
     def actions_column(self, instance):
-            return u' '.join(self._actions_column(instance))
+            return ' '.join(self._actions_column(instance))
 
     actions_column.allow_tags = True
     actions_column.short_description = _('ordering')

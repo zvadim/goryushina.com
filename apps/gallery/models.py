@@ -18,5 +18,5 @@ class Image(models.Model):
 
     page = models.ForeignKey('page.Page', related_name='gallery')
 
-    def __unicode__(self):
-        return self.title or u'Image #%s' % self.pk
+    def __str__(self):
+        return self.title or 'Image #%s' % self.pk

@@ -1,5 +1,5 @@
 from django.db import models
-from polymorphic import PolymorphicModel
+from polymorphic.models import PolymorphicModel
 
 
 class Menu(models.Model):
@@ -19,9 +19,6 @@ class Menu(models.Model):
 
 
 class MenuItem(PolymorphicModel):
-
     def __str__(self):
         instance = self.get_real_instance()
         return '%s: %s' % (instance.object_type(), instance.title)
-
-

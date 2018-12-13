@@ -19,7 +19,7 @@ def thumbnail_images(text, geometry_string='800'):
         src = tag['src']
         if src.startswith(settings.MEDIA_URL):
             src = src[len(settings.MEDIA_URL):]
-            im = get_thumbnail(src, geometry_string)
+            im = get_thumbnail(src, geometry_string, quality=99, format='PNG')
             tag['src'] = im.url
             tag['width'] = '100%'
             tag['height'] = ''

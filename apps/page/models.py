@@ -9,13 +9,13 @@ from apps.menu.models import MenuItem
 class Page(MenuItem):
     title = models.CharField(max_length=128)
     text = HTMLField(
-        verbose_name=u'Text',
+        verbose_name='Text',
         help_text='The best video/photo size is 695x390'
     )
 
     slug = models.SlugField(unique=True)
 
-    category = models.ForeignKey('page.Category', blank=True, null=True)
+    group = models.ForeignKey('page.Category', verbose_name='Category', blank=True, null=True, related_name='pages')
     preview = ImageField(upload_to='page_preview', blank=True, null=True)
 
     create_date = models.DateTimeField(auto_now_add=True)
@@ -25,7 +25,7 @@ class Page(MenuItem):
 
     class Meta:
         ordering = ('order', 'title')
-        
+
     @staticmethod
     def object_type():
         return 'Page'
@@ -58,7 +58,7 @@ class Category(MenuItem):
 
     @property
     def active_pages(self):
-        return self.page_set.filter(is_active=True)
+        return self.pages.filter(is_active=True)
 
     def __str__(self):
         return '%s: %s' % (self.object_type(), self.title)
