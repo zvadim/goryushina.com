@@ -1,9 +1,5 @@
-from polymorphic.admin import PolymorphicChildModelAdmin
-
 from sorl.thumbnail.admin import AdminImageMixin
-
 from django.contrib import admin
-
 from apps.changelist_ordering.admin import ChangeListOrdering
 from apps.gallery.models import Image
 
@@ -14,7 +10,7 @@ class GalleryInline(AdminImageMixin, admin.StackedInline):
     model = Image
 
 
-class PageAdmin(AdminImageMixin, PolymorphicChildModelAdmin, ChangeListOrdering):
+class PageAdmin(AdminImageMixin, ChangeListOrdering):
     base_model = Page
     show_in_index = True
 
@@ -25,7 +21,7 @@ class PageAdmin(AdminImageMixin, PolymorphicChildModelAdmin, ChangeListOrdering)
     inlines = (GalleryInline,)
 
 
-class CategoryAdmin(PolymorphicChildModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     base_model = Category
     show_in_index = True
 
