@@ -5,15 +5,13 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class ChangeListOrdering(admin.ModelAdmin):
+    change_list_template = [
+        'changelist_ordering.html',
+    ]
 
     def __init__(self, *args, **kwargs):
-        super(ChangeListOrdering, self).__init__(*args, **kwargs)
-
+        super().__init__(*args, **kwargs)
         self.list_display = list(self.list_display)
-
-        self.change_list_template = [
-            'changelist_ordering.html',
-        ]
 
     def changelist_view(self, request, extra_context=None, *args, **kwargs):
         """

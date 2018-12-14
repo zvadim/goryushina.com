@@ -26,15 +26,15 @@ class Page(MenuItem):
     class Meta:
         ordering = ('order', 'title')
 
+    def __str__(self):
+        return '{}: {}'.format(self.object_type(), self.title)
+
     @staticmethod
     def object_type():
         return 'Page'
 
     def get_url(self):
         return reverse('ui:page', kwargs={'slug': self.slug})
-
-    def __str__(self):
-        return '{}: {}'.format(self.object_type(), self.title)
 
     def get_absolute_url(self):
         return self.get_url()
@@ -49,6 +49,9 @@ class Category(MenuItem):
         ordering = ('title',)
         verbose_name_plural = 'Categories'
 
+    def __str__(self):
+        return '{}: {}'.format(self.object_type(), self.title)
+
     @staticmethod
     def object_type():
         return 'Category'
@@ -56,12 +59,9 @@ class Category(MenuItem):
     def get_url(self):
         return reverse('ui:category', kwargs={'slug': self.slug})
 
+    def get_absolute_url(self):
+        return self.get_url()
+
     @property
     def active_pages(self):
         return self.pages.filter(is_active=True)
-
-    def __str__(self):
-        return '{}: {}'.format(self.object_type(), self.title)
-
-    def get_absolute_url(self):
-        return self.get_url()

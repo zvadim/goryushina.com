@@ -1,4 +1,5 @@
 from polymorphic.admin import PolymorphicChildModelAdmin
+
 from sorl.thumbnail.admin import AdminImageMixin
 
 from django.contrib import admin
@@ -15,6 +16,8 @@ class GalleryInline(AdminImageMixin, admin.StackedInline):
 
 class PageAdmin(AdminImageMixin, PolymorphicChildModelAdmin, ChangeListOrdering):
     base_model = Page
+    show_in_index = True
+
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'group', 'is_active', 'create_date')
     list_filter = ('group', 'is_active')
@@ -24,6 +27,8 @@ class PageAdmin(AdminImageMixin, PolymorphicChildModelAdmin, ChangeListOrdering)
 
 class CategoryAdmin(PolymorphicChildModelAdmin):
     base_model = Category
+    show_in_index = True
+
     prepopulated_fields = {'slug': ('title',)}
 
 
