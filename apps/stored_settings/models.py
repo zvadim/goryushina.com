@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -26,7 +25,7 @@ class Settings(models.Model):
     type = models.CharField(_('Field type'), choices=Type.CHOICES, max_length=16, default=Type.DEFAULT)
 
     def __unicode__(self):
-        return '%s (%s)' % (self.name, self.key)
+        return '{} ({})'.format(self.name, self.key)
 
     class Meta:
         verbose_name = _('Setting')

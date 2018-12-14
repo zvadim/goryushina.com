@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 from django.db.models.fields.files import ImageFieldFile
 from django.db. models import ImageField
-from stored_settings.models import Settings
-from stored_settings.settings import UPLOAD_TO_DIRECTORY
+from .models import Settings
+from .settings import UPLOAD_TO_DIRECTORY
 
 
 def stored_settings(request):

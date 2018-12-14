@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 from django.contrib import admin
-from stored_settings.forms import SettingsCreationForm, SettingsForm
-from stored_settings.models import Settings
+from .forms import SettingsCreationForm, SettingsForm
+from .models import Settings
 
 
 class SettingsAdmin(admin.ModelAdmin):
@@ -29,12 +28,12 @@ class SettingsAdmin(admin.ModelAdmin):
     def get_readonly_fields(self, request, obj=None):
         if not obj:
             return ()
-        return super(SettingsAdmin, self).get_readonly_fields(request, obj)
+        return super().get_readonly_fields(request, obj)
 
     def get_fieldsets(self, request, obj=None):
         if not obj:
             return self.add_view_fieldsets
-        return super(SettingsAdmin, self).get_fieldsets(request, obj)
+        return super().get_fieldsets(request, obj)
 
     def get_form(self, request, obj=None, **kwargs):
         """
@@ -47,9 +46,11 @@ class SettingsAdmin(admin.ModelAdmin):
         return super(SettingsAdmin, self).get_form(request, obj, **defaults)
 
     def response_add(self, request, obj, post_url_continue=None):
+        # FIXME:
         # 'Save' -> 'Save and continue editing'
-        if '_addanother' not in request.POST and '_popup' not in request.POST:
-            request.POST['_continue'] = 1
-        return super(SettingsAdmin, self).response_add(request, obj, post_url_continue)
+        # if '_addanother' not in request.POST and '_popup' not in request.POST:
+        #     request.POST['_continue'] = 1
+        return super().response_add(request, obj, post_url_continue)
+
 
 admin.site.register(Settings, SettingsAdmin)

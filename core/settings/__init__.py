@@ -44,14 +44,14 @@ INSTALLED_APPS = [
     'gunicorn',
     'tinymce',
     'sorl.thumbnail',
-    'stored_settings',
 
     # Project apps
+    'apps.stored_settings',
     'apps.changelist_ordering',
     'apps.ui',
-    'apps.page',
     'apps.gallery',
     'apps.menu',
+    'apps.page',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.stored_settings.context_processors.stored_settings',
             ],
         },
     },

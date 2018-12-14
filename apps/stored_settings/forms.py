@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import re
 from django import forms
 from django.contrib.admin.widgets import AdminTextareaWidget, AdminTextInputWidget
@@ -9,8 +8,8 @@ from django.conf import settings
 from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
-from stored_settings.models import Settings
-from stored_settings.settings import ENABLE_TINYMCE, UPLOAD_TO_DIRECTORY
+from .models import Settings
+from .settings import ENABLE_TINYMCE, UPLOAD_TO_DIRECTORY
 
 if ENABLE_TINYMCE:
     assert 'tinymce' in settings.INSTALLED_APPS
@@ -36,7 +35,7 @@ class SettingsCreationForm(forms.ModelForm):
 
 class SettingsForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
-        super(SettingsForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         if self.instance.type == Settings.Type.CHAR:
             self.fields['value'].widget = AdminTextInputWidget(attrs={})
@@ -54,7 +53,7 @@ class SettingsForm(forms.ModelForm):
             self.fields['value'].label = 'Is true'
 
     def save(self, commit=True):
-        instance = super(SettingsForm, self).save(commit=False)
+        instance = super().save(commit=False)
 
         if self.instance.type == Settings.Type.BOOLEAN:
             # if it is checkbox and value is False - save as empty string
