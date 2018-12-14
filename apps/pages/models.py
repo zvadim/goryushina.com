@@ -34,7 +34,7 @@ class Page(MenuItem):
         return reverse('ui:page', kwargs={'slug': self.slug})
 
     def __str__(self):
-        return '%s: %s' % (self.object_type(), self.title)
+        return '{}: {}'.format(self.object_type(), self.title)
 
     def get_absolute_url(self):
         return self.get_url()
@@ -61,7 +61,7 @@ class Category(MenuItem):
         return self.pages.filter(is_active=True)
 
     def __str__(self):
-        return '%s: %s' % (self.object_type(), self.title)
+        return '{}: {}'.format(self.object_type(), self.title)
 
     def get_absolute_url(self):
         return self.get_url()
